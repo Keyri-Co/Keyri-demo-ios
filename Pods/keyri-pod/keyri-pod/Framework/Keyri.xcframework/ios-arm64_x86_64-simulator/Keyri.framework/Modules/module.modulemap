@@ -1,0 +1,4 @@
+framework module Keyri {
+  header "Keyri-Swift.h"
+  requires objc
+}
