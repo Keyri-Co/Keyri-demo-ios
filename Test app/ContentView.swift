@@ -22,7 +22,7 @@ struct ContentView: View {
     var body: some View {
         ScrollView(showsIndicators: true) {
             VStack {
-                TextField("Public user ID)", text: $inputString)
+                TextField("Public user ID", text: $inputString)
                     .textInputAutocapitalization(.never)
                     .disableAutocorrection(true)
                     .frame(height: 48)
@@ -97,21 +97,6 @@ struct ContentView: View {
                     }
                 }, label: {
                     Text("List association keys")
-                }).padding()
-                
-                Button(action: {
-                    keyri.listUniqueAccounts { res in
-                        switch res {
-                        case .success(let keys):
-                            text = keys?.map { (key: String, value: String) in
-                                return "\(key): \(value)"
-                            }.joined(separator: ",\n") ?? "No keys present"
-                        case .failure(let error):
-                            text = error.localizedDescription
-                        }
-                    }
-                }, label: {
-                    Text("List unique accounts")
                 }).padding()
                 
                 Button(action: {
