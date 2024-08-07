@@ -13,9 +13,10 @@ struct ContentView: View {
     @State var inputString = ""
     @State private var showingAlert = false
     
-    let keyri = KeyriInterface(appKey: "Ekrdi04LFJSRraLObtJpUap6fkh45fwi",
-                               publicApiKey:   "QjBbOrlRALdlebpAuhjtNIJJzgL4vkIF",
-                               serviceEncryptionKey: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEEzteySVilYBihc6V67mN084ajGYlBOqXr6JmZ2A26Z6iW/9G8EYxPxfPRgzADrcZUHAcCuXfnv3alDvwYoGaFg==",
+    // TODO: Add your credentials from Dashboard
+    let keyri = KeyriInterface(appKey: "",
+                               publicApiKey: "",
+                               serviceEncryptionKey: "",
                                detectionsConfig: KeyriDetectionsConfig(blockTamperDetection: true)
     )
     
